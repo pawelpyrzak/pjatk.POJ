@@ -1,11 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+package pl.edu.pja.lab1;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj liczbe studentow: ");
+        int liczbastudentow = scanner.nextInt();
+
+        scanner.nextLine();
+        System.out.println("Podaj imiona studentow: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Podaj liczbe punktow: ");
+        int points = scanner.nextInt();
+
+
+        for (int i = 0; i < liczbastudentow - 1; i++)
+        {
+            System.out.println("Podaj imiona studentow: ");
+            String nameTmp = scanner.nextLine();
+
+            scanner.nextLine();
+            System.out.println("Podaj liczbe punktow: ");
+            int pointsTmp = scanner.nextInt();
+
+            if (points < pointsTmp)
+            {
+                name = nameTmp;
+                points = pointsTmp;
+            }
+        }
+        System.out.println("Najlepszym studentem jest "+name+" z " + points + " punktami");
+    }
+}
