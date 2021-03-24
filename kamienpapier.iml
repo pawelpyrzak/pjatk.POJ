@@ -1,11 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+package pl.edu.pja.lab1;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Kamien, papier, nozyce");
+		Scanner input = new Scanner(System.in);
+		System.out.println("Wybierz:1 kamien, 2 papier, 3 nozyce");
+		int gamer = input.nextInt();
+
+		int computer = (int) (Math.random() * 3) + 1;
+
+		System.out.print("Wynik:");
+		if (gamer == 1) {
+			if (computer == 1)
+				System.out.print("Remis");
+			else if (computer == 2)
+				System.out.print("Przegrales, CPU wybral papier");
+			else if (computer == 3)
+				System.out.print("Wygrales, CPU wybral nozyczki");
+		} else if (gamer == 2) {
+			if (computer == 2)
+				System.out.print("Remis");
+			else if (computer == 3)
+				System.out.print("Przegrales,CPU wybral nozyczki");
+			else if (computer == 1)
+				System.out.print("Wygrales, CPU wybral kamien");
+		} else if (gamer == 3) {
+			if (computer == 3)
+				System.out.print("Remis");
+			else if (computer == 1)
+				System.out.print("Przegrales, CPU wybral kamien ");
+			else if (computer == 2)
+				System.out.print("Wygrales, CPU wybral papier");
+		} else {
+			System.out.println("Blad, sprobuj ponownie");
+		}
+	}
+}
