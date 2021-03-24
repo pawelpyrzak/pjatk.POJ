@@ -1,11 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+package pl.edu.pja.lab1;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner odczyt = new Scanner(System.in);
+
+        int a = odczyt.nextInt();
+        int b = odczyt.nextInt();
+        int c = odczyt.nextInt();
+
+        if ((a > b) && (a > c) && (b > c)) {
+            System.out.println(a);
+            System.out.println(b);
+            System.out.println(c);
+        }
+        else if ((b > a) && (b > c) && (a > c)) {
+            System.out.println(b);
+            System.out.println(a);
+            System.out.println(c);
+        }
+        else if ((c > b) && (c > a) && (b > a)) {
+            System.out.println(c);
+            System.out.println(b);
+            System.out.println(a);
+        }
+        else if ((c > b) && (c > a) && (a > b)) {
+            System.out.println(c);
+            System.out.println(a);
+            System.out.println(b);
+        }
+    }
+}
