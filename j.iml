@@ -1,11 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+package pl.edu.pja.lab1;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Wpisz nazwe miesiaca: ");
+
+        int monthNumber;
+
+        monthNumber = in.nextInt();
+
+        if (monthNumber == 1)
+
+            System.out.println("Styczen");
+
+        else if (monthNumber == 2)
+
+            System.out.println("Luty");
+
+        else if (monthNumber == 3)
+
+            System.out.println("Marzec");
+
+        else if (monthNumber == 4)
+
+            System.out.println("Kwiecien");
+
+        else if (monthNumber == 5)
+
+            System.out.println("Maj");
+
+        else if (monthNumber == 6)
+
+            System.out.println("Czerwiec");
+
+        else if (monthNumber == 7)
+
+            System.out.println("Lipiec");
+
+        else if (monthNumber == 8)
+
+            System.out.println("Sierpien");
+
+        else if (monthNumber == 9)
+
+            System.out.println("Wrzesien");
+
+        else if (monthNumber == 10)
+
+            System.out.println("Pazdziernik");
+
+        else if (monthNumber == 11)
+
+            System.out.println("Listopad");
+
+        else if (monthNumber == 12)
+
+            System.out.println("Grudzien");
+
+        else
+
+            System.out.println("blad.");
