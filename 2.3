@@ -1,0 +1,25 @@
+package pl.edu.pja.lab1;
+
+public class Main {
+    public static int sum(int[][]array)
+    {
+
+        int sum = 0;
+        for(int i=0;i<array.length;i++)
+        {
+            for (int j = 0; j < array[0].length; j++)
+            {
+                sum = sum + array[i][j];
+            }
+        }
+        return sum;
+
+    }
+    public static void main(String[] args) {
+        int[][] array1 = {{7,8,4},{2,2,7}};
+        int[][] array2 = {{5,8,4},{4,3,2}};
+        System.out.println(("Suma elementow pierwszej tabeli wynosi:") + sum(array1 ));
+        System.out.println("Suma elementow drugiej tabeli wynosi:" + sum(array2));
+    }
+
+}
