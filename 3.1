@@ -1,0 +1,53 @@
+package pl.edu.pja.lab1;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Kwadrat kwadrat = new Kwadrat();
+        System.out.println("Bok kwadratu wynosi: " + kwadrat.getBok());
+        System.out.println("Pole kwadratu wynosi: " + kwadrat.getPole());
+        System.out.println("Obliczanie obwodu: " + kwadrat.getObliczanieobwodu());
+        System.out.println("Obliczanie pola: " + kwadrat.getObliczaniepola());
+
+
+
+        }
+
+    }
+    package pl.edu.pja.lab1;
+
+public class Kwadrat {
+    private float bok;
+    private float pole;
+    private float obliczanieobwodu;
+    private float obliczaniepola;
+
+    public Kwadrat() {
+        bok = 10;
+        pole = 100;
+        obliczanieobwodu = 4 * bok;
+        obliczaniepola = bok * bok;
+    }
+
+    public float getBok() {
+        return bok;
+    }
+
+    public float getPole() {
+        return pole;
+    }
+
+    public float getObliczaniepola() {
+        return obliczaniepola;
+
+    }
+
+    public float getObliczanieobwodu() {
+        return obliczanieobwodu;
+    }
+
+
+}
+
+
+
