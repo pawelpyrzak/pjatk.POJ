@@ -1,0 +1,104 @@
+package pl.edu.pja.lab1;
+
+public class Main {
+
+    public static void main(String[] args) {
+        PC first = new PC();
+        PC second = new PC(Kind.NOTEBOOK, PcSystem.MAC_OS,20);
+
+        System.out.println(first);
+        System.out.print(second);
+
+
+
+        {
+
+        }
+    }
+}
+package pl.edu.pja.lab1;
+
+public class PC {
+    private final Kind kind;
+    private final PcSystem pcSystem;
+    private boolean on;
+    private final int cores;
+
+
+
+    public PC(Kind kind, PcSystem pcSystem,int cores) {
+        this.kind = kind;
+        this.pcSystem = pcSystem;
+        this.on = on;
+        this.cores = cores;
+    }
+    public PC() {
+        this.pcSystem = PcSystem.LINUX;
+        this.kind = Kind.DESKTOP;
+        this.on = true;
+        this.cores = 4;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "PC{" +
+                "pcSystem=" + pcSystem +
+                ", kind=" + kind +
+                ", on=" + on +
+                ", cores=" + cores +
+                '}';
+    }
+    public void informacje()
+    {
+        System.out.println(this);
+
+    }
+}
+package pl.edu.pja.lab1;
+
+public enum PcSystem {
+    MAC_OS("Big Sur"),
+    WINDOWS("10"),
+    LINUX("Kali");
+
+    private final String value;
+
+    PcSystem(final String value) {
+
+        this.value = value;
+    }
+
+    public String getValue(){
+        return value;
+    }
+    @Override
+    public String toString() {
+        return value;
+    }
+}
+package pl.edu.pja.lab1;
+
+public enum Kind {
+    NOTEBOOK(1),
+    DESKTOP(2);
+
+    private final int value;
+
+    Kind(final int value) {
+        this.value = value;
+    }
+
+    public int GetKind() {
+        return this.value;
+    }
+    public String toString()
+    {
+        return String.valueOf(value);
+    }
+
+
+}
+
+
+
