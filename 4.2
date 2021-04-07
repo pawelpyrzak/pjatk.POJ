@@ -1,0 +1,63 @@
+package pracadomowa4;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Game game;
+        Game game1 = new Game();
+
+    }
+}
+package pracadomowa4;
+
+import java.util.*;
+
+public class Game {
+    boolean win = false;
+    final int minvalue;
+    final int maxvalue;
+
+
+
+    Scanner scanner = new Scanner(System.in);
+
+    public Game() {
+        System.out.println("Specify a range of numbers - minimum value");
+        this.minvalue = scanner.nextInt();
+        System.out.println("Specify a range of numbers - maximum value");
+        this.maxvalue = scanner.nextInt();
+
+        System.out.println("The game has started. Choose your numbers.");
+
+        int randomNumber = new Random().nextInt((maxvalue-minvalue) + 1) + minvalue;
+        do {
+            int input = new Scanner(System.in).nextInt();
+            if (input < randomNumber) {
+                System.out.println("The number is too small!");
+                System.out.println("The guessed number is: " + randomNumber);
+
+            } else if (input > randomNumber) {
+                System.out.println("The number is too big");
+                System.out.println("The guessed number is: " + randomNumber);
+
+            }
+            else if (input < minvalue) {
+                System.out.println("The number is smaller than range");
+                System.out.println("The guessed number is: " + randomNumber);
+
+            }
+            else if (input > maxvalue) {
+                System.out.println("The number is bigger than range");
+                System.out.println("The guessed number is: " + randomNumber);
+
+            } else {
+                System.out.println("You won! Congartulations ");
+                win = true;
+            }
+
+        }while(!win );
+
+            }
+        }
+
