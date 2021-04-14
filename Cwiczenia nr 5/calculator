@@ -1,0 +1,13 @@
+package cwiczenia5;
+
+import java.sql.SQLOutput;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        System.out.println(" Wynik potegi wynosi: " + calculator.calculate(2));
+        System.out.println("Wynik iloczynu wynosi: " + calculator.calculate(6, 8));
+        System.out.println("Wynik sumy wynosi: " + calculator.calculate(4, 9, 1));
+    }
+}
