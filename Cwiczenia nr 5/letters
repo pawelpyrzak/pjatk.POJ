@@ -1,0 +1,40 @@
+package cwiczenia5;
+
+public class Main {
+
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+        D d = new D();
+        E e = new E();
+        E last = new E();
+        last.present("niceeee");
+    }
+}
+package cwiczenia5;
+
+public class B extends A{
+}
+package cwiczenia5;
+
+public class D extends C {
+}
+package cwiczenia5;
+
+public class E extends D {
+}
+package cwiczenia5;
+
+public class C extends B {
+}
+package cwiczenia5;
+
+public class A  {
+    public void present(final String phrase){
+        System.out.println(phrase);
+    }
+}
+
+
+
