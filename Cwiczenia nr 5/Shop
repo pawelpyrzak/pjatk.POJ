@@ -1,0 +1,73 @@
+package cwiczenia5;
+
+public class Main {
+
+    public static void main(String[] args) {
+		Shop shop = new Shop("Wyzwolenia","duzy");
+		Bookshop bookshop = new Bookshop("Grunwaldzka", "maly");
+		String[]bookshopProdcuts = {"Encyklopedia", "Zbior zadan", " Lalka"};
+		Bakery bakery = new Bakery("Obroncow Wybrzeza", "sredni");
+		String[] bakeryProcucts = {"Chleb", "Paczki", "Drozdzowka"};
+
+		shop.getInformation();
+		bookshop.getInformation();
+		bakery.getInformation();
+    }
+
+}
+ckage cwiczenia5;
+
+
+
+public class Shop {
+    final String address;
+    final String size;
+
+    public Shop(String address, String size) {
+        this.address = address;
+        this.size = size;
+    }
+
+    public void getInformation() {
+        System.out.println("Sklep znajduje sie na ulicy " + address + ", sklep jest " + size + ".");
+        }
+    }
+    package cwiczenia5;
+
+public class Bookshop extends Shop {
+    private String[] products;
+
+    public Bookshop(String address, String size) {
+        super(address, size);
+        this.products = products;
+    }
+    @Override
+    public void getInformation() {
+        super.getInformation();
+        System.out.println("Produkty: ");
+        for (String products : products) {
+            System.out.println(products);
+
+        }
+    }
+}
+package cwiczenia5;
+
+public class Bakery extends Shop {
+    private String[] products;
+
+    public Bakery(String address, String size) {
+        super(address, size);
+        this.products = products;
+    }
+
+    @Override
+    public void getInformation() {
+        super.getInformation();
+        System.out.println("Produkty: ");
+        for (String products : products) {
+            System.out.println(products);
+        }
+    }
+
+
