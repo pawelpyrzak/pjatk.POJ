@@ -1,0 +1,74 @@
+package cwiczenia5;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+	Animal animal = new Animal("Zwierzeta", "kolorowe" );
+	System.out.println(animal.toString());
+
+	Cat cat = new Cat("leila", "biała");
+	System.out.println(cat.toString());
+
+	Dog dog = new Dog("Azor","czarny" );
+	System.out.println(dog.toString());
+
+
+    }
+}
+package cwiczenia5;
+
+public class Cat extends  Animal{
+    public Cat(String name, String color){
+        super(name, color);
+    }
+    String makesound(){
+        return "Meow-Meow";
+    }
+    @Override
+    public String toString(){
+        return super.toString()+"\n"+this.makesound();
+    }
+}
+package cwiczenia5;
+
+public class Animal {
+    private String name;
+    private String color;
+
+
+    public Animal() {
+
+    }
+
+    public Animal(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+
+    }
+}
+package cwiczenia5;
+
+public class Dog extends Animal {
+        public Dog(String name, String color){
+            super(name, color);
+        }
+        String makesound(){
+            return "Woof-Woof";
+        }
+        @Override
+        public String toString(){
+            return super.toString()+"\n"+this.makesound();
+        }
+    }
+
+
