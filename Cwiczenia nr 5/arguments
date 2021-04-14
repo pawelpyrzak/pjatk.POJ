@@ -7,3 +7,22 @@ public class Main {
         System.out.println(stack.toString());
     }
 }
+
+package cwiczenia5;
+
+import java.util.Arrays;
+
+public class Stack {
+    private final int[] arguments;
+
+    public Stack(final int ... arguments) {
+        this.arguments = arguments;
+    }
+
+    @Override
+    public String toString() {
+        return "Stack{" +
+                "arguments=" + Arrays.toString(arguments) +
+                '}';
+    }
+}
