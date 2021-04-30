@@ -1,0 +1,22 @@
+package cwiczenia7;
+
+public enum Sign {
+    CONSONANT("bcdfghjklmprstqwz"),
+    VOWEL("aąęeiouyó"),
+    SPACE(" "),
+    NUMBER("1234567890");
+
+    private final String sign;
+
+    Sign(String sign){
+        this.sign=sign;
+    }
+    @Override
+    public String toString() {
+        return String.valueOf(sign);
+    }
+
+    public String allSigns(){
+        return CONSONANT.toString()+VOWEL.toString()+SPACE.toString()+NUMBER.toString();
+    }
+}
