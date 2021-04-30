@@ -1,0 +1,32 @@
+package cwiczenia7;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        final Scanner scanner = new Scanner(System.in);
+
+        boolean personCreat = false;
+
+        while (!personCreat){
+            System.out.println("Enter person data");
+
+            System.out.println("Person first name");
+            final String firstName = scanner.nextLine();
+            System.out.println("Person last name:");
+            final String lastName = scanner.nextLine();
+            System.out.println("Person birthday:");
+            final String birthYear = scanner.nextLine();
+
+            try{
+	            final person Person = new person(firstName,lastName,birthYear);
+                System.out.println(person.toString());
+                personCreat = true;
+            } catch (final Exception exception){
+                System.out.println(exception.getMessage());
+            }
+
+        }
+    }
+}
