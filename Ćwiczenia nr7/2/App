@@ -1,0 +1,25 @@
+import cwiczenia7.BankAccount;
+
+import java.util.Scanner;
+public class main {
+    private static final String EXIT = "exit";
+    private final static BankAccount account = new BankAccount(Math.random() * 10000);
+    public static void main(final String[] args) {
+        final Scanner in = new Scanner(System.in);
+        boolean isExit = false;
+        while (!isExit) {
+            final String line = in.nextLine();
+            if (EXIT.equals(line)) {
+                isExit = true;
+            } else {
+                try {
+                    account.transaction(line);
+                }catch (NumberFormatException numberFormatException){
+                    System.out.println("bad input: "+line);
+                }catch (InsufficientFundsException insufficientFundsException){
+                    System.out.println(insufficientFundsException.getMessage());
+                }
+            }
+        }
+    }
+}
