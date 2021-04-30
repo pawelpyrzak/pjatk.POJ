@@ -1,0 +1,22 @@
+package cwiczenia7;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println(method(3,"Banan", "Jablko","Sliwka","Ananas","Jarmuz","Brzoskiwnia","Mango", "Marakuja"));
+    }
+
+    static String method(int a,String... strings){
+        int counter = 0;
+        String tmp="";
+        for (String stringss:strings) {
+            if (counter%a==0){
+                tmp+=stringss+" ";
+            }
+            counter++;
+        }
+
+        return tmp.trim();
+
+    }
+}
