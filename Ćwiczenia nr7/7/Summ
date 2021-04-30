@@ -1,0 +1,11 @@
+package cwiczenia7;
+
+public class Summ {
+    int sum(int... tab){
+        int tmp= 0;
+        for (int a:tab){
+            tmp +=a;
+        }
+        return tmp;
+    }
+}
