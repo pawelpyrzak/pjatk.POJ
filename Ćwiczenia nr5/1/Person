@@ -1,0 +1,63 @@
+package cwiczenia7;
+
+
+public class person  {
+    private final String firstName;
+    private final String lastName;
+    private final String birthYear;
+
+
+    public person(String firstName, String lastName, String birthYear) throws Exception {
+        validatePersonalData(firstName,lastName,birthYear);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+    }
+    private void validatePersonalData(final String firstName, final String lastName, final String birthYear) throws Exception {
+        if (firstName == null || firstName.isEmpty()) {
+            throw new IllegalArgumentException("First name is incorrect!! Given: " + firstName);
+        }
+        if (lastName == null || lastName.isEmpty()) {
+            throw new IllegalArgumentException("Last name is incorrect! Given: " + lastName);
+        }
+        if (birthYear == null || birthYear.isEmpty()) {
+            throw new IllegalArgumentException("Birth year cannot be parsed to int!");
+        }
+        if (stringToInt(birthYear)  < 1900 ||stringToInt(birthYear) > 2021) {
+            throw new Exception("Birth year is incorrect! Given: " + birthYear);
+        }
+    }
+
+    public int stringToInt(String string) {
+        int newInt = Integer.parseInt(string);
+        return newInt;
+    }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", birthYear='" + birthYear + '\'' +
+                    '}';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
