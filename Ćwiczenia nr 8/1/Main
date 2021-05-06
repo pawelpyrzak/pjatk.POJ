@@ -1,0 +1,60 @@
+import java.io.File;
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        File exercise = new File("exercise");
+        exercise.mkdir();
+
+        File plik1 = new File("exercise/plik1.txt");
+        if (!plik1.exists());
+        try {
+            plik1.createNewFile();
+            System.out.println("Plik został utworzony");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        File plik2 = new File("exercise/plik2.txt");
+        if (!plik2.exists());
+        try {
+            plik2.createNewFile();
+            System.out.println("Plik został utworzony");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        File plik3 = new File("exercise/plik3.txt");
+        if (!plik3.exists()) ;
+        try {
+            plik3.createNewFile();
+            System.out.println("Plik został utworzony");
+        } catch (Exception f) {
+            System.out.println(f.getMessage());
+        }
+        File katalog = new File("exercise/katalog");
+        katalog.mkdir();
+        if (!katalog.exists()) ;
+        try {
+            katalog.createNewFile();
+            System.out.println("Katalog został utworzony");
+        } catch (Exception g) {
+            System.out.println((g.getMessage()));
+        }
+        File katalog2 = new File("exercise/katalog2");
+        katalog2.mkdir();
+        if (!katalog2.exists()) ;
+        try {
+            katalog.createNewFile();
+            System.out.println("Katalog został utworzony");
+        } catch (Exception g) {
+            System.out.println((g.getMessage()));
+        }
+        InformationProvider provInfo = new InformationProvider();
+        provInfo.displayInformation(plik1);
+        provInfo.displayInformation(plik2);
+        provInfo.displayInformation(plik3);
+        provInfo.displayInformation(katalog);
+        provInfo.displayInformation(katalog2);
+
+    }
+}
