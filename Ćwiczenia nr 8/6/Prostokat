@@ -1,0 +1,24 @@
+public class Prostokat implements Figura {
+    final int bokA;
+    final int bokB;
+
+    public Prostokat(int bokA, int bokB) {
+        this.bokA = bokA;
+        this.bokB = bokB;
+    }
+
+
+
+    @Override
+    public void obliczPole() {
+        System.out.println("Pole prostokąta wynosi: " + bokA*bokB +" " + "jednostek kwadratowych");
+
+    }
+
+    @Override
+    public void obliczObwod() {
+        System.out.println("Obwód prostokąta wynosi: " + bokA+bokA+bokB+bokB+" " +"jednostek");
+
+
+    }
+}
