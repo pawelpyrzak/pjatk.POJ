@@ -1,0 +1,20 @@
+public class Kolo implements Figura{
+    final int promien;
+    final double pi = 3.14;
+
+    public Kolo(int promien) {
+        this.promien = promien;
+    }
+
+    @Override
+    public void obliczPole() {
+        System.out.println("Pole koła wynosi: " + pi*promien*promien +" " + "jednostek kwadratowych");
+
+    }
+
+    @Override
+    public void obliczObwod() {
+        System.out.println("Obwód koła wynosi: " + 2*pi*promien +" " + "jednostek");
+
+    }
+}
