@@ -1,0 +1,25 @@
+
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
+import java.time.LocalDate;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+
+        int counter = 0;
+        while (counter < 100) {
+
+            localDate = localDate.plusYears(1);
+
+            if (localDate.isLeapYear()) ;
+            counter++;
+            System.out.println(localDate);
+
+            String outString = localDate + "\n";
+            Files.write(out.toPath, outString.getBytes(), StandardOpenOption.APPEND);
+
+            }
+        }
+    }
