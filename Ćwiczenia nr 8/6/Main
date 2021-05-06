@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+		Kolo kolo = new Kolo(8);
+		kolo.obliczObwod();
+		kolo.obliczPole();
+
+		Kwadrat kwadrat = new Kwadrat(2);
+		kwadrat.obliczObwod();
+		kwadrat.obliczPole();
+
+		Prostokat prostokat = new Prostokat(4, 5);
+		prostokat.obliczObwod();
+		prostokat.obliczPole();
+    }
+}
