@@ -1,0 +1,20 @@
+import java.io.File;
+
+public class InformationProvider {
+    public void displayInformation(File file){
+        System.out.println(file.getName());
+        System.out.println(file.getAbsolutePath());
+        if(file.isFile()){
+            System.out.println(file.getName()+ " jest plikiem.");
+        }else {
+            System.out.println(file.getName() + " jest katalogiem.");
+        }
+        if(file.exists()){
+            System.out.println("Plik istnieje");
+        }else {
+            System.out.println("Plik nie istnieje");
+        }
+        System.out.println();
+    }
+
+}
