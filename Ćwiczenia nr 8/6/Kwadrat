@@ -1,0 +1,19 @@
+public class Kwadrat implements Figura{
+    final int bok;
+
+    public Kwadrat(int bok) {
+        this.bok = bok;
+    }
+
+    @Override
+    public void obliczPole() {
+        System.out.println("Pole kwadratu wynosi: " + bok*bok+" " +"jednostek kwadratowych");
+
+    }
+
+    @Override
+    public void obliczObwod() {
+        System.out.println("Obwód kwadratu wynosi: " + bok+bok+bok+bok+" " +"jednostek");
+
+    }
+}
