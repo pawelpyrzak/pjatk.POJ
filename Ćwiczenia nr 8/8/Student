@@ -1,0 +1,26 @@
+public class Student implements Comparable<Student> {
+    final String imie;
+    final String nazwisko;
+    final String indeks;
+
+    public Student(String imie, String nazwisko, String indeks) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.indeks = indeks;
+    }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "Imie='" + imie + '\'' +
+                ", Nazwisko='" + nazwisko + '\'' +
+                ", Numer indeksu=" + indeks +
+                '}';
+        }
+
+
+    @Override
+    public int compareTo(Student o) {
+        Student that = (Student)o;
+        return indeks.compareTo(that.indeks);
+    }
+}
