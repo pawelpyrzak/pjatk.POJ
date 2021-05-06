@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Student maciej = new Student("Maciej", "Maciejowy", "s1234");
+        Student wojtek = new Student("Wojetek", "Wojtkowski", "s4321");
+        Student mariusz = new Student("Mariusz", "Mariuszowy", "s2314");
+        Student weronika = new Student("Weronika", "Werka", "s3214");
+
+        List<Student> listaStudentow = new ArrayList<>();
+        listaStudentow.add(maciej);
+        listaStudentow.add(wojtek);
+        listaStudentow.add(mariusz);
+        listaStudentow.add(weronika);
+        Collections.sort(listaStudentow);
+
+        for (Student student : listaStudentow) {
+            System.out.println(student.toString());
+        }
+    }
+}
