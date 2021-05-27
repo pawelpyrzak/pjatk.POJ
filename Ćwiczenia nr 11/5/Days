@@ -1,0 +1,88 @@
+package cwiczenia11;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+
+public class Days extends JFrame{
+    int day,month,year;
+    final JButton button;
+    final JTextField textField;
+    final JLabel promptlabel;
+    final JLabel resultlabel;
+    final JLabel randomlabel;
+
+    public Days() {
+        setLayout(new FlowLayout());
+
+        promptlabel = new JLabel("Enter a date (in DD-MM-YYYY format): ");
+        add(promptlabel);
+
+        textField = new JTextField(5);
+        add(textField);
+
+        button = new JButton("Confirm");
+        add(button);
+
+        resultlabel = new JLabel("");
+        add(resultlabel);
+
+        randomlabel = new JLabel("");
+        add(randomlabel);
+
+        event event = new event();
+        button.addActionListener(event);
+
+    }
+
+
+    public class event implements ActionListener {
+        public void actionPerformed(ActionEvent event) {
+            String[] splitedDate = textField.getText().split("-");
+            try {
+                day = Integer.parseInt(splitedDate[0]);
+                month = Integer.parseInt(splitedDate[1]);
+                year = Integer.parseInt(splitedDate[2]);
+            } catch (Exception e) {
+                randomlabel.setText("Wrong date input");
+            }
+            Date enteredDate = new Date(year, month, day);
+            System.out.println("The entered date is: " + day + " " + month + " " + year);
+            int whichDay = enteredDate.getDay();
+            System.out.println("It will be: " + whichDay);
+
+
+            switch (whichDay) {
+                case 0:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Wednesday");
+                    break;
+                case 1:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Thursday");
+                    break;
+                case 2:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Friday");
+                    break;
+                case 3:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Saturday");
+                    break;
+                case 4:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Sunday");
+                    break;
+                case 5:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Monday");
+                    break;
+                case 6:
+                    randomlabel.setText(day + "-" + month + "-" + year + " " + "-this day is Tuesday");
+                    break;
+            }
+        }
+    }
+                public static void main (String[] args){
+                    Days days = new Days();
+                    days.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    days.setVisible(true);
+                    days.setSize(250, 150);
+
+                }
+            }
