@@ -1,0 +1,44 @@
+package cwiczenia11;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class datetoday {
+    private JTextArea textFieldDateToDay;
+    private JButton confirmButton;
+    private JButton clearButton;
+    private JTextField textFieldResult;
+    private JPanel panelMain;
+
+    public datetoday() {
+
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textFieldDateToDay.setText("");
+                textFieldResult.setText("");
+
+
+            }
+        });
+        confirmButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("datetoday");
+                frame.setContentPane(new datetoday().panelMain);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+
+            }
+        });
+    }
+}
