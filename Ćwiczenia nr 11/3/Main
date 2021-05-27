@@ -1,0 +1,48 @@
+package cwiczenia11;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+    public class Reverse {
+        private JButton confirmButton;
+        private JButton clearButton;
+        private JTextField OutputTextField;
+        private JTextField InputTextField;
+        private JPanel panelMain;
+
+        public Reverse() {
+            confirmButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String reverseString = " ";
+                    String userInput = InputTextField.getText();
+                    int length = userInput.length();
+                    for (int i = length -1; i>=0; i--) {
+                        reverseString = reverseString + userInput.charAt(i);
+                    }
+                    OutputTextField.setText(reverseString);
+
+                }
+            });
+
+            clearButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    OutputTextField.setText("");
+                    InputTextField.setText("");
+
+
+                }
+            });
+        }
+
+        public static void main (String[]args) {
+            JFrame frame = new JFrame("Reverse");
+            frame.setContentPane(new Reverse().panelMain);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
+
+        }
+    }
