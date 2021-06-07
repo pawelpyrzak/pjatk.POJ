@@ -1,0 +1,44 @@
+package sample;
+
+public class Account {
+    private int userPin = 1234;
+    private double balance = 2000;
+
+
+    public Account(int newId, double newBalance)
+    {
+        userPin = userPin;
+        balance = newBalance;
+    }
+
+    public int getUserPin()
+    {
+        return userPin;
+    }
+
+    public double getBalance()
+    {
+        return balance;
+    }
+
+    public void setUserPin(int newUserPin)
+    {
+        userPin = newUserPin;
+    }
+
+    public void setBalance(double newBalance)
+    {
+        balance = newBalance;
+    }
+
+    public void withdraw(double amount)
+    {
+        balance -= amount;
+    }
+
+    public void deposit(double amount)
+    {
+        balance += amount;
+    }
+}
+
