@@ -1,0 +1,8 @@
+public class App {
+    public static void main(final String[] args) {
+        final MyDate myDate = new MyDate(17, 6, 2021);
+        System.out.println("My date: "+ myDate.toString1());
+        System.out.println("My date: "+ myDate.toString2());
+        System.out.println("My date: "+ myDate.toString3());
+    }
+}
