@@ -1,0 +1,26 @@
+import java.text.DateFormatSymbols;
+
+public class MyDate {
+    private final int days;
+    private final int months;
+    private final int years;
+
+    public MyDate(final int days, final int months, final int years) {
+        this.days = days;
+        this.months = months;
+        this.years = years;
+    }
+
+    public String toString1() {
+        return this.days +"."+ this.months +"."+ this.years;
+    }
+
+
+    public String toString2() {
+        return String.format("%02d", this.days) +"."+ String.format("%02d", this.months) +"."+ this.years;
+    }
+
+    public String toString3() {
+        return this.days+" "+  new DateFormatSymbols().getShortMonths()[this.months - 1]+" "+ this.years;
+    }
+}
