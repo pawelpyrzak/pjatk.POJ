@@ -1,0 +1,11 @@
+public class App {
+    public static void main(final String[] args) {
+        final Order order = new Order(3);
+
+        order.addPosition(new Position("Chleb", 2, 2));
+        order.addPosition(new Position("Banany", 1, 6));
+
+        System.out.print("Zamówienie:");
+        System.out.println(order);
+    }
+}
