@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(0, 1, 2, 3, 4, 5,6,4,3,2);
+        System.out.println(unique(list));
+    }
+
+    public static <E> List<E> unique(List<E> nonUnique){
+        return new ArrayList<>(new HashSet<E>(nonUnique));
+    }
+}
