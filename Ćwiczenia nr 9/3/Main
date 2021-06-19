@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import static java.lang.Enum.valueOf;
+import static javafx.scene.input.KeyCode.T;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Animal zwierzak1 = new Animal("Pies");
+        Animal zwierzak2 = new Animal("Kot");
+        Animal zwierzak3 = new Animal("Anakonda");
+        Animal zwierzak4 = new Animal("Papuga");
+        Animal zwierzak5 = new Animal("Zebra");
+        ArrayList<Animal> stringList = new ArrayList<>();
+        stringList.add(zwierzak1);
+        stringList.add(zwierzak2);
+        stringList.add(zwierzak3);
+        stringList.add(zwierzak4);
+        stringList.add(zwierzak5);
+
+        AnimalsCage klatka1 = new AnimalsCage(zwierzak1,5);
+        AnimalsCage klatka2 = new AnimalsCage(zwierzak2,3);
+        AnimalsCage klatka3 = new AnimalsCage(zwierzak3,2);
+        AnimalsCage klatka4 = new AnimalsCage(zwierzak4,10);
+        AnimalsCage klatka5 = new AnimalsCage(zwierzak5,18);
+        ArrayList<AnimalsCage> integerList = new ArrayList<>();
+        integerList.add(klatka1);
+        integerList.add(klatka2);
+        integerList.add(klatka3);
+        integerList.add(klatka4);
+        integerList.add(klatka5);
+
+
+        findMax(stringList);
+        findMax(integerList);
+
+    }
+
+    private static <T> void findMax(ArrayList<T> list) {
+        System.out.println("Before sort");
+        for (T elements : list){
+            System.out.println(elements.toString());
+        }
+        System.out.println("Sorting...");
+        System.out.println();
+        //Collections.sort(list); // tutaj jest cos nie tak ale nie wiem czemu
+        for (T elements : list){
+            System.out.println(elements.toString());
+        }
+    }
+
+}
