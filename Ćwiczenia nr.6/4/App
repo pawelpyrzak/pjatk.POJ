@@ -1,0 +1,11 @@
+public class App {
+    public static void main(String[] args) {
+        Time time = new Time(2,31);
+        System.out.println(time.toString());
+        Time newTime = time.addTime(time);
+        System.out.println(newTime.toString());
+        Time newNewTime = newTime.multiplyTime(2);
+        System.out.println(newNewTime.toString());
+
+    }
+}
