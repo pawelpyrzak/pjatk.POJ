@@ -1,0 +1,39 @@
+public class Time {
+    private final int hours;
+    private final int minutes;
+
+    public Time(final int hours, final int minutes) {
+        this.hours = hours;
+        this.minutes = minutes;
+    }
+
+    @Override
+    public String toString() {
+        return "hours=" + hours +
+                ", minutes=" + minutes;
+    }
+
+    public Time addTime(final Time time){
+        int newMinutes=this.minutes + time.minutes;
+        int newHours= this.hours + time.hours;
+        while (newMinutes>59)
+        {
+            newMinutes=newMinutes-60;
+            newHours++;
+        }
+
+        return new Time(newHours,newMinutes);
+    }
+
+    public Time multiplyTime(final int multiplier){
+        int newMinutes=this.minutes * multiplier;
+        int newHours= this.hours * multiplier;
+        while (newMinutes>59)
+        {
+            newMinutes=newMinutes-60;
+            newHours++;
+        }
+        return new Time(newHours,newMinutes);
+    }
+
+}
