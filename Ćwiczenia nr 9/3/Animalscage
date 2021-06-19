@@ -1,0 +1,18 @@
+public class AnimalsCage implements Comparable<AnimalsCage> {
+    private Animal animal;
+    private int cagenumber;
+
+    public AnimalsCage(Animal animal, int cagenumber) {
+        this.animal = animal;
+        this.cagenumber = cagenumber;
+    }
+
+    public int getCagenumber() {
+        return cagenumber;
+    }
+
+    @Override
+    public int compareTo(AnimalsCage o) {
+        return o.getCagenumber() - this.cagenumber;
+    }
+}
