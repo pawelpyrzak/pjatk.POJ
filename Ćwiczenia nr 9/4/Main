@@ -1,0 +1,13 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Mylist<String> list = new Mylist<>();
+        System.out.println("Enter string ");
+        while (list.add(scan.nextLine())){
+            System.out.println("Enter string ");
+        }
+    }
+}
