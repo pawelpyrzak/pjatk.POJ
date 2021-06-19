@@ -14,7 +14,7 @@ public class Mylist<E> {
 
     public boolean add(E element) {
         if (lastItemIndex < arr.length) {
-            out.println("Kontrolny, index " + lastItemIndex + " dlugosc tab "+  arr.length);
+            out.println("Kontrolny, index " + lastItemIndex + " długość tab "+  arr.length);
             arr[lastItemIndex] = element;
             lastItemIndex++;
             return true;
@@ -26,7 +26,6 @@ public class Mylist<E> {
             arr[lastItemIndex] = element;
             lastItemIndex++;
 
-            // kontrolne wypisywanie tablicy czy działa
             for (E elem : arr){
                 out.println(elem);
             }
