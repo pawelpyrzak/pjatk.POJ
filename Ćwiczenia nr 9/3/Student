@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+
+public class Student {
+    private final String name;
+    private final HashMap<String, Double> grades = new HashMap<>();
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public void addGrade(String course, double grade) {
+        if (grade > 5 || grade < 2) {
+            System.out.println("Incorect grade");
+        } else {
+            grades.put(course, grade);
+            System.out.println("Added");
+
+        }
+    }
+
+    public void getAverege(String crs) {
+        double sum = 0;
+        double amountOfGrades = 0;
+        crs.toUpperCase(Locale.ROOT);
+        for(String course : grades.keySet()){
+            System.out.println(course); // pomocnicze
+            if(course.equals(crs)){
+                for (double mark : grades.values()){
+                    System.out.println(grades.values());
+                }
+            }
+
+        }
+    }
+}
