@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private List<Double> grades = new ArrayList<>();
+
+    public void addGrade(double grade){
+        this.grades.add(grade);
+    }
+
+    public double getAvgGrade(){
+        if (grades.size()==0) return 0;
+        double summ=0;
+        for (double grade:grades) {
+            summ+=grade;
+        }
+        return summ/grades.size();
+    }
+}
