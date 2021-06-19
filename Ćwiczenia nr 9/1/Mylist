@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class Mylist<E> {
+
+    private int lastItemIndex;
+    private E[] arr;
+
+    public Mylist() {
+        arr = (E[]) new Object[20];
+        lastItemIndex = -1;
+    }
+
+    public boolean add(E element) {
+        if (lastItemIndex < 20){
+            arr[lastItemIndex + 1] = element;
+            lastItemIndex++;
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+}
