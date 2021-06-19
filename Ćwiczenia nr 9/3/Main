@@ -8,11 +8,11 @@ import static javafx.scene.input.KeyCode.T;
 public class Main {
     public static void main(String[] args) {
 
-        Animal zwierzak1 = new Animal("Pies");
-        Animal zwierzak2 = new Animal("Kot");
-        Animal zwierzak3 = new Animal("Anakonda");
-        Animal zwierzak4 = new Animal("Papuga");
-        Animal zwierzak5 = new Animal("Zebra");
+        Animal zwierzak1 = new Animal("Kogut");
+        Animal zwierzak2 = new Animal("Lampard");
+        Animal zwierzak3 = new Animal("Krokodyl");
+        Animal zwierzak4 = new Animal("Trygrys");
+        Animal zwierzak5 = new Animal("Szynszyl");
         ArrayList<Animal> stringList = new ArrayList<>();
         stringList.add(zwierzak1);
         stringList.add(zwierzak2);
@@ -45,7 +45,7 @@ public class Main {
         }
         System.out.println("Sorting...");
         System.out.println();
-        //Collections.sort(list); // tutaj jest cos nie tak ale nie wiem czemu
+        //Collections.sort(list); 
         for (T elements : list){
             System.out.println(elements.toString());
         }
