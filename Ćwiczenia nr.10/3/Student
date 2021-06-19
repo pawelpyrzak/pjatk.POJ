@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Student {
+    private Map<String, List<Double>> grades = new HashMap<>();
+
+    public void addGrade(String course, double grade){
+        this.grades.computeIfAbsent(course,value -> new ArrayList<>());
+        this.grades.get(course).add(grade);
+    }
+
+    public double getAvgGrade(String course){
+        if (grades.get(course).size()==0) return 0;
+        double summ=0;
+
+        for (double grade:grades.get(course)) {
+            summ+=grade;
+        }
+        return summ/grades.get(course).size();
+    }
+}
