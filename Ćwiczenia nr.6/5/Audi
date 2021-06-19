@@ -1,0 +1,13 @@
+public class Audi extends Car{
+    public Audi(String color, int year) {
+        super(200, color, "Audi", year);
+    }
+
+    public void accelerate(){
+        this.speed = this.speed+30;
+
+        if (this.speed > this.speedLimit) {
+            this.speed = this.speedLimit;
+        }
+    }
+}
