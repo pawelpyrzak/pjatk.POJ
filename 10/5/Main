@@ -1,0 +1,45 @@
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a number from 1-49");
+
+        Set<Integer> usersNumbers = usersDraw();
+        Set<Integer> compNumbers = compDraw();
+
+        System.out.println("Users guess"+usersNumbers+"\nComp guess"+compNumbers);
+
+        int counter=0;
+        for (int number: usersNumbers) {
+            if (compNumbers.contains(number)) counter++;
+        }
+
+        System.out.println("number of hits "+counter);
+
+    }
+
+    public static Set<Integer> usersDraw(){
+        Scanner scanner= new Scanner(System.in);
+        Set<Integer> usersNumbers = new HashSet<>();
+        while (usersNumbers.size()<6){
+            int number = scanner.nextInt();
+            if (number>0 && number<50){
+                usersNumbers.add(number);
+            }
+            System.out.println("Left: " + (6-usersNumbers.size())+ " numbers");
+        }
+        return usersNumbers;
+    }
+
+    public static Set<Integer> compDraw(){
+        Random random = new Random();
+        Set<Integer> compNumbers = new HashSet<>();
+        while (compNumbers.size()<6){
+            compNumbers.add(random.nextInt(48)+1);
+        }
+        return compNumbers;
+    }
+}
