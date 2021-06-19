@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(wordsCount("Zaległe zadanie z laboratoriów numer dziesięć").entrySet());
+    }
+
+    public static Map<String, Integer> wordsCount(String text){
+       String[] splitedText = text.split(" ");
+       Map<String, Integer> wordsMap = new HashMap<>();
+       for (String word: splitedText){
+           wordsMap.compute(word, (key, value)-> value==null ? 1 : value+1);
+       }
+       return wordsMap;
+    }
+}
