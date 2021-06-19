@@ -1,0 +1,9 @@
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.addGrade("POJ",3);
+        student.addGrade("POJ",3);
+        student.addGrade("POJV2",5);
+        System.out.println(student.getAvgGrade("POJ"));
+    }
+}
