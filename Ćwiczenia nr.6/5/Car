@@ -1,0 +1,37 @@
+import java.util.Objects;
+
+public abstract class Car {
+    protected final int speedLimit;
+    protected int speed;
+    private final String color;
+    private final String brand;
+    private final int year;
+
+    public Car(final int speedLimit, final String color, final String brand, final int year) {
+        this.speedLimit = speedLimit;
+        this.color = color;
+        this.brand = brand;
+        this.year = year;
+        this.speed = 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return year == car.year && color.equals(car.color) && brand.equals(car.brand);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, brand, year);
+    }
+
+    @Override
+    public String toString() {
+        return this.color+" "+this.brand+" rocznik "+this.year+" test pedkosci "+this.speed;
+    }
+
+    public abstract void accelerate();
+}
