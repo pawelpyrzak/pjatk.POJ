@@ -1,11 +1,15 @@
-public class App {
+package com.company;
+
+import javax.swing.text.Position;
+import java.util.ArrayList;
+
+public class Main {
     public static void main(final String[] args) {
-        final Order order = new Order(3);
+        final Order order = new Order(new ArrayList<>());
 
-        order.addPosition(new Position("Chleb", 2, 2));
-        order.addPosition(new Position("Banany", 1, 6));
+        order.addPosition(new Position("Apple", 2, 2));
+        order.addPosition(new Position("Greap", 1, 6));
 
-        System.out.print("Zamówienie:");
-        System.out.println(order);
+        System.out.print("Order:" + order);
     }
 }
