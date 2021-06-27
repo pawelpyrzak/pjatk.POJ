@@ -1,35 +1,33 @@
+package com.company;
+
+import javax.swing.text.Position;
+import java.util.ArrayList;
+
 public class Order {
-    private List<Position> positions;
-    private final int maximumSize;
+    public final ArrayList<Position> positions;
+    public int max;
 
-    public Order(final int maximumSize) {
-        this.positions = new ArrayList<>();
-        this.maximumSize = maximumSize;
+    public Order(ArrayList<Position> positions, int max) {
+        this.positions = positions;
+        this.max = max;
     }
 
-    public Order() {
-        this.positions=new ArrayList<>();
-        this.maximumSize=10;
+    public Order(final ArrayList<Position> positions)
+    {
+        this(positions,10);
     }
 
-    public void addPosition(Position position){
-        if (this.positions.size()==this.maximumSize){
+    public void addPosition(final Position position)
+    {
+        if(this.positions.size() == max)
+        {
             return;
         }
         this.positions.add(position);
     }
 
-    private double countValue(){
-        double value =0;
-        for (Position position:positions) {
-            value=value+position.countWorth();
-        }
-        return value;
-    }
-
     @Override
     public String toString() {
-        return this.positions.toString()+
-                "\n Razem: "+this.countValue();
+        return "positions=" + positions + "\n";
     }
 }
