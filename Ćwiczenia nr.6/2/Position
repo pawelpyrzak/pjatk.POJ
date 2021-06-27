@@ -1,16 +1,18 @@
-public class Position {
+package com.company;
+
+public class Position<count> {
     private final String Name;
     private final int count;
     private final double price;
 
-    public Position(final String Name, final int count, final double price) {
+    public Position(final String Name, final double price, final int count) {
         this.Name = Name;
         this.count = count;
         this.price = price;
     }
 
-    public double countWorth() {
-        return this.count * this.price;
+    public double countWorth(){
+    return this.count * this.price;
     }
 
     @Override
