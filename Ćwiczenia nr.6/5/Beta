@@ -1,0 +1,15 @@
+package com.company;
+
+public class Beta extends Car {
+    public Beta(final String color, final int year) {
+        super(color, year);
+    }
+
+    public void accelerate(){
+        this.speed = this.speed+30;
+
+        if (this.speed > this.speedLimit) {
+            this.speed = this.speedLimit;
+        }
+    }
+}
